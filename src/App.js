@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Row, Col, Layout } from 'antd';
+import { ViewNotes, WithTimer } from '../src/views'
+const { Header, Footer, Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Layout>
+      <Header className='headerStyle'>A SIMPLE TIMER AND NOTE APPLICATION</Header>
+      <Content className='contentStyle'>
+        <Row type="flex" justify="space-between">
+          <WithTimer />
+          <Col><ViewNotes /></Col>
+        </Row>
+      </Content>
+      <Footer> All rights reserved </Footer>
+    </Layout>
+  )
 }
 
 export default App;

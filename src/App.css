@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,45 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.ant-layout {
+  height: -webkit-fill-available;
+}
+
+.headerText {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.smallTopMargin {
+  margin-top: 18px;
+}
+
+.smallerTopMargin {
+  margin-top: 15px;
+}
+
+.timerFace {
+  display: flex;
+  font-size: 4rem;
+  font-family: monospace;
+}
+
+.noteContainer {
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+.headerStyle {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+}
+
+.contentStyle {
+  padding: 0 50px;
+  margin-top: 120px;
 }
