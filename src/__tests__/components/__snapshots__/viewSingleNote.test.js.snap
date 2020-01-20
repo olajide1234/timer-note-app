@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render component correctly 1`] = `
+<div
+  className="smallerTopMargin"
+>
+  <div
+    className="ant-card ant-card-bordered ant-card-small"
+    style={
+      Object {
+        "width": 250,
+      }
+    }
+  >
+    <div
+      className="ant-card-head"
+      style={Object {}}
+    >
+      <div
+        className="ant-card-head-wrapper"
+      >
+        <div
+          className="ant-card-head-title"
+        >
+          12:12:12
+        </div>
+        <div
+          className="ant-card-extra"
+        >
+          <button
+            className="ant-btn ant-btn-danger ant-btn-sm"
+            onClick={[Function]}
+            type="button"
+          >
+            <span>
+              Delete
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ant-card-body"
+      style={Object {}}
+    >
+      <p>
+        Test text
+      </p>
+    </div>
+  </div>
+</div>
+`;

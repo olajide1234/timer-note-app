@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render component correctly 1`] = `
+<div>
+  <div
+    className="headerText"
+  >
+    Add Notes
+  </div>
+  <div
+    className="smallTopMargin"
+  >
+    <form
+      className="ant-form ant-form-horizontal"
+      onSubmit={[Function]}
+    >
+      <div
+        className="ant-row ant-form-item"
+        style={Object {}}
+      >
+        <div
+          className="ant-col ant-form-item-control-wrapper"
+          style={Object {}}
+        >
+          <div
+            className="ant-form-item-control"
+          >
+            <span
+              className="ant-form-item-children"
+            >
+              <span
+                className="ant-input-affix-wrapper ant-input-affix-wrapper-textarea-with-clear-btn"
+              >
+                <textarea
+                  className="ant-input"
+                  cols="33"
+                  onChange={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Jot your note here"
+                  rows="5"
+                  style={Object {}}
+                  value=""
+                />
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <button
+        className="ant-btn ant-btn-primary"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span>
+          Save note
+        </span>
+      </button>
+    </form>
+  </div>
+</div>
+`;

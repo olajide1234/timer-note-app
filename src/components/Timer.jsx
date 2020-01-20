@@ -12,13 +12,14 @@ import { Button, Row, Col } from 'antd';
  * const resetFn = f => f
  * const stopFn = f => f
  * const currentTimerStopId = 2
+ * const timerPause = true
  * return (
- *   <Timer time={time} startFn={startFn} resetFn={resetFn} stopFn={stopFn} currentTimerStopId={currentTimerStopId}  />
+ *   <Timer time={time} startFn={startFn} resetFn={resetFn} stopFn={stopFn} currentTimerStopId={currentTimerStopId} timerPause={timerPause}  />
  * )
  */
 export function Timer(props) {
 
-  const { time, startFn, resetFn, stopFn, currentTimerStopId } = props;
+  const { time, startFn, resetFn, stopFn, currentTimerStopId, timerPause } = props;
   const [buttonDisable, setButtonDisable] = useState({ start: false, pause: false });
 
   return (
@@ -30,7 +31,7 @@ export function Timer(props) {
       <Row type="flex" justify="space-between">
         <Col>
           <Button
-            disabled={buttonDisable.start}
+            disabled={timerPause ? false : buttonDisable.start}
             onClick={() => { startFn(); setButtonDisable({ start: true, pause: false }) }}
           >
             Start
@@ -38,7 +39,7 @@ export function Timer(props) {
         </Col>
         <Col>
           <Button
-            disabled={buttonDisable.pause}
+            disabled={buttonDisable.pause || timerPause}
             onClick={() => { stopFn(currentTimerStopId); setButtonDisable({ start: false, pause: true }) }}
           >
             Pause
@@ -81,5 +82,10 @@ Timer.propTypes = {
   /**
    * Id to stop timeout function
    */
-  currentTimerStopId: PropTypes.number.isRequired
+  currentTimerStopId: PropTypes.number.isRequired,
+
+  /**
+   * Bool to show if timer is paused
+   */
+  timerPause: PropTypes.bool.isRequired
 }

@@ -10,14 +10,16 @@ const { TextArea } = Input;
  * @component
  * @example
  * const time = '12:12:12' 
+ * const stopFn = f => f
+ * currentTimerStopId = 2
  * return (
- *   <AddNote time={time} />
+ *   <AddNote time={time} stopFn={stopFn} currentTimerStopId=2  />
  * ) 
  */
 export function AddNote(props) {
 
   const dispatch = useDispatch();
-  const { time } = props;
+  const { time, stopFn, currentTimerStopId } = props;
   const [note, setNote] = useState('');
   const [validate, setValidate] = useState({ status: '', help: '' });
 
@@ -33,6 +35,7 @@ export function AddNote(props) {
       setValidate({ status: 'error', help: 'Note can not be empty' });
       return;
     }
+    stopFn(currentTimerStopId);
     dispatch({ type: 'ADD_NOTE', payload: { time, text: note } });
     setNote('');
   }
@@ -73,6 +76,16 @@ AddNote.propTypes = {
   /**
    * Current timer value for note
    */
-  time: PropTypes.string.isRequired
+  time: PropTypes.string.isRequired,
+
+  /**
+   * Function to stop timer
+   */
+  stopFn: PropTypes.func.isRequired,
+
+  /**
+   * Id of current timer to be stopped
+   */
+  currentTimerStopId: PropTypes.number.isRequired
 }
 
