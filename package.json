@@ -13,6 +13,7 @@
     ]
   },
   "dependencies": {
+    "@olavoparno/jest-badges-readme": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -32,7 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage --watchAll=false",
+    "test": "react-scripts test --coverage --watchAll=false && node_modules/.bin/jest-badges-readme",
     "eject": "react-scripts eject",
     "docs": "jsdoc -c jsdoc.conf.json"
   },

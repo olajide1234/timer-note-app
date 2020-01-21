@@ -1,7 +1,7 @@
 This project is a simple timer and note taking application. 
 
 Test coverage: 
-![Test coverage](https://img.shields.io/badge/Coverage-86.6%25-yellow.svg)
+![Test coverage](#statements#)
 
 ## Available Scripts
 
