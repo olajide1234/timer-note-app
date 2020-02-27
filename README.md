@@ -1,5 +1,7 @@
 This project is a simple timer and note taking application. 
 
+Deployed on Netlify - https://sharp-leavitt-dd8233.netlify.com/
+
 Test coverage: 
 ![Test coverage](https://img.shields.io/badge/Coverage-86.6%25-green.svg)
 
